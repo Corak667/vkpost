@@ -1,0 +1,1 @@
+@set bin_iojs=%~dp0..\bin\iojs
