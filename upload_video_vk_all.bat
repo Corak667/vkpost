@@ -10,7 +10,7 @@ set tokenparam=-k %token%
 if %token% EQU 0 set tokenparam=
 if not exist vkvideo_log.txt echo Log Start>vkvideo_log.txt
 for %%G in (%ext%) do (
-"%iojs%" "%vkpost%" --file "%%G" -g %groupid% %tokenparam% --no-encode-progress>temp.txt 
+"%iojs%" "%script%" --file "%%G" -g %groupid% %tokenparam% --no-encode-progress>temp.txt 
 type temp.txt 
 copy /b vkvideo_log.txt+temp.txt vkvideo_log.txt)
 pause
